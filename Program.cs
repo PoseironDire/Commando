@@ -43,6 +43,7 @@ public class Program
                 Bot.AI();
                 Controller.Move();
                 Textures.ShowPlayer();
+                GameState.CheckWin();
             }
 
 

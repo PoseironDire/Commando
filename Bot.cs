@@ -18,7 +18,8 @@ public class Bot
     public static int i = 0;
     public static Vector2 position2 = new Vector2(Program.w / 2 + 200, Program.h / 2);
     Random generator = new Random();
-    Color botColor = new Color(0, 200, 0, 255);
+    Color botColor = new Color(200, 0, 0, 255);
+    Color botRadarColor = new Color(200, 0, 0, 100);
 
     public void AI()
     {
@@ -78,7 +79,7 @@ public class Bot
             }
         }
         //Draw Bot
-        Raylib.DrawCircle(x2, y2, Player.playerSize * 2, botColor);
+        Raylib.DrawCircle(x2, y2, Player.playerSize * 2, botRadarColor);
         Raylib.DrawCircle(x2, y2, Player.playerSize / 2, botColor);
     }
 }
