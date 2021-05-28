@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Numerics;
 using Raylib_cs;
 
 public class Program
@@ -10,6 +11,7 @@ public class Program
     public static bool UpdateVisual;
     public static Random generator = new Random();
     public static List<Rectangle> rects = new List<Rectangle>();
+    public static Vector2 mousePos = Raylib.GetMousePosition();
 
     public static void Main(string[] args)
     {
@@ -25,27 +27,31 @@ public class Program
         Player P1 = new Player();
         Menu Menus = new Menu();
         PlayerMovement Controller = new PlayerMovement();
-        Textures Textures = new Textures();
+        Textures Texture = new Textures();
 
         rects.Add(new Rectangle());
 
         while (!Raylib.WindowShouldClose())
         {
+            mousePos = Raylib.GetMousePosition();
             Raylib.BeginDrawing();
             Raylib.ClearBackground(Assets.bg);
 
             if (State == "Start")
             {
                 Menus.Start();
-                Textures.Steve();
+                Texture.Steve();
             }
             if (State != "Start")
             {
                 P1.Draw();
                 Bot.AI();
-                Controller.Move();
-                Textures.ShowPlayer();
+                Texture.ShowPlayer();
                 Menus.CheckWin();
+            }
+            if (State == "Game")
+            {
+                Controller.Move();
             }
 
             bool areOverlapping = Raylib.CheckCollisionCircles(Player.position, Player.playerSize / 2, Bot.position2, Player.playerSize / 2);

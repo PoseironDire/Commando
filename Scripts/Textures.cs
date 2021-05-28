@@ -5,9 +5,11 @@ using Raylib_cs;
 public class Textures
 {
     //Textures
-    public static Texture2D steveTexture = Raylib.LoadTexture(@"Images/steve.png");
-    public static Texture2D playerTexture = Raylib.LoadTexture(@"Images/drone.png");
-    public static Texture2D playButtonTexture = Raylib.LoadTexture(@"Images/Button.png");
+    public static Texture2D steveTexture = Raylib.LoadTexture(@"Images/Steve.png");
+    public static Texture2D playerTexture = Raylib.LoadTexture(@"Images/Drone.png");
+    public static Texture2D arrowTexture = Raylib.LoadTexture(@"Images/Arrow.png");
+    public static Texture2D playButtonTexture = Raylib.LoadTexture(@"Images/StartButton.png");
+    public static Texture2D guideButtonTexture = Raylib.LoadTexture(@"Images/GuideButton.png");
 
     //Totally Unrelated Logic
     public static Vector2 stevePos = new Vector2(Program.w / 2, Program.h - 200);
@@ -26,16 +28,9 @@ public class Textures
             new Vector2(Player.playerSize / 2, Player.playerSize / 2), // Origin
             Player.rotation,
             Color.WHITE);
-            //Guide Button SoundOn (Not Currently Though)
-            Raylib.SetSoundVolume(Assets.guideSound, 1f);
         }
         else
         {
-            //Guide Button SoundOff
-            Raylib.SetSoundVolume(Assets.guideSound, 0f);
-            //Guide Button PlaySound
-            Raylib.PlaySound(Assets.guideSound);
-
             //Right
             if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
             {
@@ -126,11 +121,10 @@ public class Textures
             }
         }
     }
-
     //Shitpost
     public void Steve()
     {
-        if (Menu.buttonSelected == true && Program.UpdateVisual == true)
+        if (Menu.playButtonSelected == true && Program.UpdateVisual == true)
         {
             int steveSize = 300;
             Raylib.DrawTexturePro(
@@ -141,5 +135,11 @@ public class Textures
                 Player.rotation,
                 Color.WHITE);
         }
+    }
+    //This is also Shitpost
+    public void IntentionalBug()
+    {
+            int spasm = Program.generator.Next(10);
+            Textures.steveModifier +=spasm;
     }
 }

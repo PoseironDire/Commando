@@ -6,34 +6,25 @@ public class PlayerMovement
 
     public void Move()
     {
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
-        {
-            movLeft = true;
-        }
-        else
-        {
-            movLeft = false;
-        }
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && Player.x < Program.w - Player.playerSize / 2)
-        {
-            Player.position.X += Player.speed;
-        }
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && Player.x > 0 + Player.playerSize / 2)
-        {
-            Player.position.X -= Player.speed;
-        }
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
-        {
-            movRight = true;
-        }
-        else
-        {
-            movRight = false;
-        }
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_W) && Player.y > 0 + Player.playerSize / 2)
+        //Player Inputs
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_W) && Player.position.Y > 0 + Player.playerSize / 2)
         {
             Player.position.Y -= Player.speed;
         }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && Player.position.X > 0 + Player.playerSize / 2)
+        {
+            Player.position.X -= Player.speed;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && Player.position.Y < Program.h - Player.playerSize / 2)
+        {
+            Player.position.Y += Player.speed;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && Player.position.X < Program.w - Player.playerSize / 2)
+        {
+            Player.position.X += Player.speed;
+        }
+
+        //Texture References
         if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
         {
             movUp = true;
@@ -42,9 +33,13 @@ public class PlayerMovement
         {
             movUp = false;
         }
-        if (Raylib.IsKeyDown(KeyboardKey.KEY_S) && Player.y < Program.h - Player.playerSize / 2)
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
         {
-            Player.position.Y += Player.speed;
+            movLeft = true;
+        }
+        else
+        {
+            movLeft = false;
         }
         if (Raylib.IsKeyDown(KeyboardKey.KEY_S))
         {
@@ -53,6 +48,14 @@ public class PlayerMovement
         else
         {
             movDown = false;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
+        {
+            movRight = true;
+        }
+        else
+        {
+            movRight = false;
         }
     }
 }
