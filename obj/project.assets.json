@@ -61,19 +61,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\edvin.tsygankov\\.nuget\\packages\\": {}
+    "C:\\Users\\Edvin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
+      "projectUniqueName": "C:\\Users\\Edvin\\Documents\\Programming\\Commando\\Commando.csproj",
       "projectName": "Commando",
-      "projectPath": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
-      "packagesPath": "C:\\Users\\edvin.tsygankov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\obj\\",
+      "projectPath": "C:\\Users\\Edvin\\Documents\\Programming\\Commando\\Commando.csproj",
+      "packagesPath": "C:\\Users\\Edvin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Edvin\\Documents\\Programming\\Commando\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\edvin.tsygankov\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Edvin\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -117,7 +117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

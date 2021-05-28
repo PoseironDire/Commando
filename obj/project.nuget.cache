@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "V+EaFx18fuaGHNk4+yFhVzkgw12nWGZDVskPNsa9Lgw0Mb/EnveTIf/1rbsmQs2HEjA/TpH915i3BSMi0xgMJw==",
+  "dgSpecHash": "ksDi4/nVvHOGgupY7aqKelzRTkW5CL0n3Mt0PEU3+FZ5A+fcSGdpnf2+SH5uZ2QjgscYfIi87dMUy8/u7wAT/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
+  "projectFilePath": "C:\\Users\\Edvin\\Documents\\Programming\\Commando\\Commando.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\edvin.tsygankov\\.nuget\\packages\\raylib-cs\\3.5.0\\raylib-cs.3.5.0.nupkg.sha512"
+    "C:\\Users\\Edvin\\.nuget\\packages\\raylib-cs\\3.5.0\\raylib-cs.3.5.0.nupkg.sha512"
   ],
   "logs": []
 }
