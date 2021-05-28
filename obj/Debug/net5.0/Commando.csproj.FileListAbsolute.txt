@@ -11,7 +11,6 @@ C:\Users\edvin.tsygankov\Documents\Programmering\Commando\bin\Debug\net5.0\runti
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\bin\Debug\net5.0\runtimes\osx-x64\native\libraylib.dylib
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\bin\Debug\net5.0\runtimes\win-x64\native\raylib.dll
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\bin\Debug\net5.0\runtimes\win-x86\native\raylib.dll
-C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.csprojAssemblyReference.cache
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.AssemblyInfoInputs.cache
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.AssemblyInfo.cs
@@ -21,3 +20,4 @@ C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Comma
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\ref\Commando.dll
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.pdb
 C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.genruntimeconfig.cache
+C:\Users\edvin.tsygankov\Documents\Programmering\Commando\obj\Debug\net5.0\Commando.csproj.AssemblyReference.cache

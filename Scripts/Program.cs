@@ -7,8 +7,9 @@ public class Program
     public static int w = 1840;
     public static int h = 1000;
     public static string State = "Start";
+    public static bool UpdateVisual;
+    public static Random generator = new Random();
     public static List<Rectangle> rects = new List<Rectangle>();
-    public static Color bg = new Color(50, 50, 50, 255);
 
     public static void Main(string[] args)
     {
@@ -22,20 +23,21 @@ public class Program
         Raylib.SetWindowIcon(icon);
         Bot Bot = new Bot();
         Player P1 = new Player();
-        GameStates GameState = new GameStates();
+        Menu Menus = new Menu();
         PlayerMovement Controller = new PlayerMovement();
-        PlayerTexture Textures = new PlayerTexture();
+        Textures Textures = new Textures();
 
         rects.Add(new Rectangle());
 
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
-            Raylib.ClearBackground(bg);
+            Raylib.ClearBackground(Assets.bg);
 
             if (State == "Start")
             {
-                GameState.Menu();
+                Menus.Start();
+                Textures.Steve();
             }
             if (State != "Start")
             {
@@ -43,18 +45,23 @@ public class Program
                 Bot.AI();
                 Controller.Move();
                 Textures.ShowPlayer();
-                GameState.CheckWin();
+                Menus.CheckWin();
             }
-
 
             bool areOverlapping = Raylib.CheckCollisionCircles(Player.position, Player.playerSize / 2, Bot.position2, Player.playerSize / 2);
             if (areOverlapping == true)
             {
                 Raylib.ClearBackground(Color.WHITE);
+                Raylib.SetSoundVolume(Assets.screamSound, 1f);
+            }
+            else
+            {
+                Raylib.SetSoundVolume(Assets.screamSound, 0f);
+                Raylib.PlaySound(Assets.screamSound);
             }
             Raylib.EndDrawing();
+            UpdateVisual = true;
         }
-        Console.ReadKey();
     }
 }
 

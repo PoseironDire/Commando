@@ -2,13 +2,21 @@ using System;
 using System.Numerics;
 using Raylib_cs;
 
-public class PlayerTexture
+public class Textures
 {
-    Player P1 = new Player();
-    public static Texture2D playerTexture = Raylib.LoadTexture(@"drone.png");
+    //Textures
+    public static Texture2D steveTexture = Raylib.LoadTexture(@"Images/steve.png");
+    public static Texture2D playerTexture = Raylib.LoadTexture(@"Images/drone.png");
+    public static Texture2D playButtonTexture = Raylib.LoadTexture(@"Images/Button.png");
 
+    //Totally Unrelated Logic
+    public static Vector2 stevePos = new Vector2(Program.w / 2, Program.h - 200);
+    public static int steveModifier;
+
+    //Nine Sprites For The Player
     public void ShowPlayer()
     {
+        //Static
         if (PlayerMovement.movDown == false && PlayerMovement.movUp == false && PlayerMovement.movLeft == false && PlayerMovement.movRight == false)
         {
             Raylib.DrawTexturePro(
@@ -18,9 +26,17 @@ public class PlayerTexture
             new Vector2(Player.playerSize / 2, Player.playerSize / 2), // Origin
             Player.rotation,
             Color.WHITE);
+            //Guide Button SoundOn (Not Currently Though)
+            Raylib.SetSoundVolume(Assets.guideSound, 1f);
         }
         else
         {
+            //Guide Button SoundOff
+            Raylib.SetSoundVolume(Assets.guideSound, 0f);
+            //Guide Button PlaySound
+            Raylib.PlaySound(Assets.guideSound);
+
+            //Right
             if (Raylib.IsKeyDown(KeyboardKey.KEY_D))
             {
                 Raylib.DrawTexturePro(
@@ -31,6 +47,7 @@ public class PlayerTexture
                 Player.rotation,
                 Color.WHITE);
             }
+            //Left
             if (Raylib.IsKeyDown(KeyboardKey.KEY_A))
             {
                 Raylib.DrawTexturePro(
@@ -41,6 +58,7 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
+            //Up
             if (Raylib.IsKeyDown(KeyboardKey.KEY_W))
             {
                 Raylib.DrawTexturePro(
@@ -51,6 +69,7 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
+            //Down
             if (Raylib.IsKeyDown(KeyboardKey.KEY_S))
             {
                 Raylib.DrawTexturePro(
@@ -61,7 +80,7 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
-
+            //Up Right
             if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && Raylib.IsKeyDown(KeyboardKey.KEY_W))
             {
                 Raylib.DrawTexturePro(
@@ -72,6 +91,7 @@ public class PlayerTexture
                 Player.rotation,
                 Color.WHITE);
             }
+            //Up Left
             if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && Raylib.IsKeyDown(KeyboardKey.KEY_W))
             {
                 Raylib.DrawTexturePro(
@@ -82,6 +102,7 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
+            //Down Right
             if (Raylib.IsKeyDown(KeyboardKey.KEY_D) && Raylib.IsKeyDown(KeyboardKey.KEY_S))
             {
                 Raylib.DrawTexturePro(
@@ -92,6 +113,7 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
+            //Down Left
             if (Raylib.IsKeyDown(KeyboardKey.KEY_A) && Raylib.IsKeyDown(KeyboardKey.KEY_S))
             {
                 Raylib.DrawTexturePro(
@@ -102,6 +124,22 @@ public class PlayerTexture
                             Player.rotation,
                             Color.WHITE);
             }
+        }
+    }
+
+    //Shitpost
+    public void Steve()
+    {
+        if (Menu.buttonSelected == true && Program.UpdateVisual == true)
+        {
+            int steveSize = 300;
+            Raylib.DrawTexturePro(
+                steveTexture,
+                new Rectangle(0, 0, 600, 600), // Source
+                new Rectangle(stevePos.X, stevePos.Y-steveModifier, steveSize, steveSize+steveModifier), // Dest(ination)
+                new Vector2(steveSize / 2, steveSize / 2), // Origin
+                Player.rotation,
+                Color.WHITE);
         }
     }
 }

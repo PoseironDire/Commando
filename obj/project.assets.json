@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
+      "projectUniqueName": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
       "projectName": "Commando",
-      "projectPath": "c:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
+      "projectPath": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\Commando.csproj",
       "packagesPath": "C:\\Users\\edvin.tsygankov\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\obj\\",
+      "outputPath": "C:\\Users\\edvin.tsygankov\\Documents\\Programmering\\Commando\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\edvin.tsygankov\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -117,7 +117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

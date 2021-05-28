@@ -2,8 +2,6 @@ using Raylib_cs;
 
 public class PlayerMovement
 {
-    Program Main = new Program();
-    Player P1 = new Player();
     public static bool movDown, movUp, movRight, movLeft;
 
     public void Move()
